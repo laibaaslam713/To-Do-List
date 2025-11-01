@@ -5,44 +5,125 @@ body {
     justify-content: center;
     align-items: center;
     font-family: "Poppins", sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(-45deg, 
+        #03455e, 
+        #1e5048, 
+        #3a504c, 
+        rgba(2, 2, 80, 0.952)
+    );
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite;
 }
-.container{
+
+@keyframes gradientBG {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+.container {
     width: 700px;
 }
-h1{
-    background: linear-gradient(90deg,#0992c4, #24e4c4);
+
+h1 {
+    background: linear-gradient(90deg, #0aa5dd, #1df0cd);
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin: 0;
-    font-size: 45px; 
+    font-size: 45px;
 }
 
-input{
+input {
     width: 100%;
     padding: 15px;
     border-radius: 10px;
-    border: 1px solid rgba(182, 181, 181, 0.863);
-    background-color: rgba(201, 199, 199, 0.226);
+    border: transparent;
+    background-color: #d1f0eb;
 }
-.addTask{
+
+.addTask {
     display: flex;
 }
-.addTask button{
+
+.addTask button {
     width: 200px;
     border-radius: 10px;
     border: none;
     margin-left: 10px;
-    background-image: linear-gradient(to right,#0992c4, #24e4c4);
+    background-image: linear-gradient(to right, #0992c4, #24e4c4);
     color: rgb(255, 255, 255);
     font-size: 15px;
     font-weight: bold;
 }
-.heading{
+
+.addTask button:hover{
+    cursor: pointer;
+    background-image: linear-gradient(to right, #24e4c4, #0992c4);
+}
+
+.heading {
     margin-bottom: 60px;
     display: flex;
     align-items: center;
-    justify-content: center; 
-    gap: 10px; 
+    justify-content: center;
+    gap: 10px;
+}
+
+.task-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.task-list li {
+    background: #f7f9fc;
+    margin: 8px 0;
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Buttons style (Edit & Delete) */
+.task-list button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 18px;
+    margin-left: 8px;
+    transition: transform 0.2s ease, color 0.3s ease;
+
+}
+
+/* Edit button */
+.edit-btn {
+    color: #007bff;
+    /* Blue color */
+}
+
+.edit-btn:hover {
+    color: #0056b3;
+    transform: scale(1.2);
+}
+
+/* Delete button */
+.task-list button:last-child {
+    color: #e63946;
+    /* Red color */
+}
+
+.task-list button:last-child:hover {
+    color: #b71c1c;
+    transform: scale(1.2);
 }
