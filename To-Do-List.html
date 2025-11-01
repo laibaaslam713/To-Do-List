@@ -3,57 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-/* Center everything on page */
-body {
-  margin: 0;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: "Poppins", sans-serif;
-}
-.container{
-    width: 700px;
-}
-h1{
-    background: linear-gradient(to right,#0992c4, #24e4c4);
-    -webkit-background-clip: text; 
-    -webkit-text-fill-color: transparent; 
-    color: #000;
-    text-align: center;
-    font-size: 45px;
-}
-
-input{
-    width: 100%;
-    padding: 15px;
-    border-radius: 10px;
-    border: 1px solid rgba(128, 128, 128, 0.863);
-    background-color: rgba(201, 199, 199, 0.226);
-}
-.addTask{
-    display: flex;
-}
-button{
-    width: 200px;
-    border-radius: 10px;
-    border: none;
-    margin-left: 10px;
-    background-image: linear-gradient(to right,#0992c4, #24e4c4);
-    color: rgb(255, 255, 255);
-    font-size: 15px;
-    font-weight: bold;
-}
-.heading{
-    margin-bottom: 60px;
-}
-    </style>
+    <link rel="stylesheet" href="stylesheet.css">
+    <title>To-Do-List</title>
 </head>
 <body>
     <div class="container">
         <div class="heading">
+            <img src="logo.png" width="50px" height="50px">
             <h1>My Task</h1>
         </div>
         <div class="addTask">
@@ -66,30 +22,7 @@ button{
         </div>
     </div>
 
-    <script>
-        let task = document.getElementById('task')
-        let add_button = document.getElementById('add-task')
-        let toDoList = document.getElementById('To-Do');
-
-        add_button.addEventListener('click', ()=>{
-            let taskText = task.value
-
-            let li = document.createElement('li');
-            li.textContent = taskText;
-
-            let deleteBtn = document.createElement('button');
-            deleteBtn.textContent = 'X';
-
-            deleteBtn.addEventListener('click', ()=>{
-                li.remove();
-            })
-
-            li.appendChild(deleteBtn);
-
-            toDoList.appendChild(li);
-
-            task.value = "";
-        })
+    <script src="To-Do-List.js">
     </script>
 </body>
 </html>

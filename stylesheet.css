@@ -1,0 +1,48 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+}
+.container{
+    width: 700px;
+}
+h1{
+    background: linear-gradient(90deg,#0992c4, #24e4c4);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0;
+    font-size: 45px; 
+}
+
+input{
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid rgba(182, 181, 181, 0.863);
+    background-color: rgba(201, 199, 199, 0.226);
+}
+.addTask{
+    display: flex;
+}
+.addTask button{
+    width: 200px;
+    border-radius: 10px;
+    border: none;
+    margin-left: 10px;
+    background-image: linear-gradient(to right,#0992c4, #24e4c4);
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    font-weight: bold;
+}
+.heading{
+    margin-bottom: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    gap: 10px; 
+}
