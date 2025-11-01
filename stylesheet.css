@@ -15,7 +15,6 @@ body {
     background-size: 400% 400%;
     animation: gradientBG 10s ease infinite;
 }
-
 @keyframes gradientBG {
       0% {
         background-position: 0% 50%;
@@ -27,11 +26,9 @@ body {
         background-position: 0% 50%;
       }
     }
-
 .container {
     width: 700px;
 }
-
 h1 {
     background: linear-gradient(90deg, #0aa5dd, #1df0cd);
     font-family: 'Poppins', sans-serif;
@@ -41,7 +38,6 @@ h1 {
     margin: 0;
     font-size: 45px;
 }
-
 input {
     width: 100%;
     padding: 15px;
@@ -49,11 +45,9 @@ input {
     border: transparent;
     background-color: #d1f0eb;
 }
-
 .addTask {
     display: flex;
 }
-
 .addTask button {
     width: 200px;
     border-radius: 10px;
@@ -64,12 +58,10 @@ input {
     font-size: 15px;
     font-weight: bold;
 }
-
 .addTask button:hover{
     cursor: pointer;
     background-image: linear-gradient(to right, #24e4c4, #0992c4);
 }
-
 .heading {
     margin-bottom: 60px;
     display: flex;
@@ -77,12 +69,10 @@ input {
     justify-content: center;
     gap: 10px;
 }
-
 .task-list ul {
     list-style: none;
     padding: 0;
 }
-
 .task-list li {
     background: #f7f9fc;
     margin: 8px 0;
@@ -94,7 +84,6 @@ input {
     align-items: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-
 .task-list button {
     border: none;
     background: none;
@@ -102,22 +91,17 @@ input {
     font-size: 18px;
     margin-left: 8px;
     transition: transform 0.2s ease, color 0.3s ease;
-
 }
-
 .edit-btn {
     color: #007bff;
 }
-
 .edit-btn:hover {
     color: #0056b3;
     transform: scale(1.2);
 }
-
 .task-list button:last-child {
     color: #e63946;
 }
-
 .task-list button:last-child:hover {
     color: #b71c1c;
     transform: scale(1.2);
