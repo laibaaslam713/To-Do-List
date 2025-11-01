@@ -7,10 +7,8 @@ body {
     font-family: "Poppins", sans-serif;
     min-height: 100vh;
     background: linear-gradient(-45deg, 
-        #03455e, 
-        #1e5048, 
-        #3a504c, 
-        rgba(2, 2, 80, 0.952)
+        #03455e, #1e5048, 
+        #3a504c, rgba(2, 2, 80, 0.952)
     );
     background-size: 400% 400%;
     animation: gradientBG 10s ease infinite;

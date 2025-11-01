@@ -7,6 +7,7 @@ window.addEventListener('load', loadTasks);
 
 add_button.addEventListener('click', () => {
     let taskText = task.value.trim();
+
     if (taskText === "") return;
 
     addTask(taskText);
@@ -61,11 +62,13 @@ function loadTasks() {
     tasks.forEach(taskText => addTask(taskText));
 }
 
+
 function deleteTask(taskText) {
     let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
     tasks = tasks.filter(t => t !== taskText);
     localStorage.setItem('tasks', JSON.stringify(tasks));
 }
+
 
 function updateTask(oldText, newText) {
     let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
