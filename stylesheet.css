@@ -7,8 +7,7 @@ body {
     font-family: "Poppins", sans-serif;
     min-height: 100vh;
     background: linear-gradient(-45deg, 
-        #03455e, #1e5048, 
-        #3a504c, rgba(2, 2, 80, 0.952)
+        #1df0cd, #0aa5dd,  #1df0aa,#0a5edd
     );
     background-size: 400% 400%;
     animation: gradientBG 10s ease infinite;
@@ -28,7 +27,7 @@ body {
     width: 700px;
 }
 h1 {
-    background: linear-gradient(90deg, #0aa5dd, #1df0cd);
+    background: linear-gradient(90deg, #060879, #07795c);
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
     -webkit-background-clip: text;
@@ -51,14 +50,14 @@ input {
     border-radius: 10px;
     border: none;
     margin-left: 10px;
-    background-image: linear-gradient(to right, #0992c4, #24e4c4);
+    background-image: linear-gradient(to right, #060879, #07795c);
     color: rgb(255, 255, 255);
     font-size: 15px;
     font-weight: bold;
 }
 .addTask button:hover{
     cursor: pointer;
-    background-image: linear-gradient(to right, #24e4c4, #0992c4);
+    background-image: linear-gradient(to right, #07795c, #060879);
 }
 .heading {
     margin-bottom: 60px;
@@ -104,3 +103,9 @@ input {
     color: #b71c1c;
     transform: scale(1.2);
 }
+.task-list li.completed span {
+    text-decoration: line-through;
+    opacity: 0.7;
+}
+.complete-btn { color: #4caf50; }
+.complete-btn:hover { transform: scale(1.2); }
