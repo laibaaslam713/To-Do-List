@@ -6,8 +6,7 @@ body {
     align-items: center;
     font-family: "Poppins", sans-serif;
     min-height: 100vh;
-    background: linear-gradient(-45deg, 
-        #1df0cd, #0aa5dd,  #1df0aa,#0a5edd
+    background: linear-gradient(135deg, #9a9beb,#28d4a9, #9cecd8, #4b4ef1
     );
     background-size: 400% 400%;
     animation: gradientBG 10s ease infinite;
@@ -26,6 +25,16 @@ h1 {
     -webkit-text-fill-color: transparent;
     margin: 0;
     font-size: 45px;
+}
+
+h2{
+   background: linear-gradient(90deg, #060879, #07795c);
+    font-family: 'Poppins', sans-serif;
+    /* font-weight: 700; */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0;
+    font-size: 25px; 
 }
 input {
     width: 100%;
@@ -67,7 +76,7 @@ input {
     border-radius: 10px;
     font-size: 16px;
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     align-items: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
@@ -95,3 +104,46 @@ input {
 }
 .complete-btn { color: #4caf50; }
 .complete-btn:hover { transform: scale(1.2); }
+
+#To-Do li,
+#Completed li {
+    display: flex;
+    justify-content: space-between; /* left text — right icons */
+    align-items: center;
+    background: white;
+    padding: 12px 15px;
+    margin: 8px 0;
+    border-radius: 10px;
+    list-style: none;
+}
+
+/* Task text */
+#To-Do li span,
+#Completed li span {
+    flex: 1;
+    font-size: 16px;
+}
+
+/* Buttons row */
+#To-Do li button,
+#Completed li button {
+    margin-left: 10px;
+    border: none;
+    background: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* Colors */
+.complete-btn {
+    color: green;
+}
+
+.edit-btn {
+    color: #007bff;
+}
+
+.delete-btn {
+    color: red;
+}
+
