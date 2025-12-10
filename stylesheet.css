@@ -13,19 +13,11 @@ body {
     animation: gradientBG 10s ease infinite;
 }
 @keyframes gradientBG {
-      0% {
-        background-position: 0% 50%;
-      }
-      50% {
-        background-position: 100% 50%;
-      }
-      100% {
-        background-position: 0% 50%;
-      }
+      0% { background-position: 0% 50%;}
+      50% { background-position: 100% 50%;}
+      100% { background-position: 0% 50%;}
     }
-.container {
-    width: 700px;
-}
+.container { width: 700px; }
 h1 {
     background: linear-gradient(90deg, #060879, #07795c);
     font-family: 'Poppins', sans-serif;
@@ -42,9 +34,7 @@ input {
     border: transparent;
     background-color: #d1f0eb;
 }
-.addTask {
-    display: flex;
-}
+.addTask { display: flex; }
 .addTask button {
     width: 200px;
     border-radius: 10px;
@@ -89,16 +79,12 @@ input {
     margin-left: 8px;
     transition: transform 0.2s ease, color 0.3s ease;
 }
-.edit-btn {
-    color: #007bff;
-}
+.edit-btn { color: #007bff;}
 .edit-btn:hover {
     color: #0056b3;
     transform: scale(1.2);
 }
-.task-list button:last-child {
-    color: #e63946;
-}
+.task-list button:last-child { color: #e63946;}
 .task-list button:last-child:hover {
     color: #b71c1c;
     transform: scale(1.2);
