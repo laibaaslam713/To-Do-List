@@ -6,8 +6,7 @@ body {
     align-items: center;
     font-family: "Poppins", sans-serif;
     min-height: 100vh;
-    background: linear-gradient(135deg, #9a9beb,#28d4a9, #9cecd8, #4b4ef1
-    );
+    background: linear-gradient(135deg, #9a9beb,#28d4a9, #9cecd8, #4b4ef1 );
     background-size: 400% 400%;
     animation: gradientBG 10s ease infinite;
 }
@@ -18,21 +17,16 @@ body {
     }
 .container { width: 700px; }
 h1 {
-    background: linear-gradient(90deg, #060879, #07795c);
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color:#060879;
     margin: 0;
     font-size: 45px;
 }
 
 h2{
-   background: linear-gradient(90deg, #060879, #07795c);
     font-family: 'Poppins', sans-serif;
-    /* font-weight: 700; */
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color:#060879;
     margin: 0;
     font-size: 25px; 
 }
@@ -98,7 +92,7 @@ input {
     color: #b71c1c;
     transform: scale(1.2);
 }
-.task-list li.completed span {
+.task-list li.completed span2 {
     text-decoration: line-through;
     opacity: 0.7;
 }

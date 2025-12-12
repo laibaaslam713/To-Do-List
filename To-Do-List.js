@@ -3,30 +3,27 @@ const task = document.getElementById('task');
 const toDoList = document.getElementById('To-Do');
 const completedList = document.getElementById('Completed');
 
-// Load tasks on refresh
 window.addEventListener('load', loadTasks);
 
-// Add new task
+
 add_button.addEventListener('click', () => {
     let taskText = task.value.trim();
 
     if (taskText === "") return;
 
-    addTask(taskText, false);  // false = not completed
+    addTask(taskText, false);  
     saveTask(taskText, false);
 
     task.value = "";
 });
 
 
-// Add Task to UI
 function addTask(taskText, isCompleted) {
     let li = document.createElement('li');
 
     let taskSpan = document.createElement('span');
     taskSpan.textContent = taskText;
 
-    // Complete Button
     let completeBtn = document.createElement('button');
     completeBtn.textContent = "✔";
     completeBtn.classList.add('complete-btn');
@@ -37,7 +34,6 @@ function addTask(taskText, isCompleted) {
         markCompleted(taskText);
     });
 
-    // Edit Button
     let editBtn = document.createElement('button');
     editBtn.textContent = '✎';
     editBtn.classList.add('edit-btn');
@@ -50,7 +46,6 @@ function addTask(taskText, isCompleted) {
         }
     });
 
-    // Delete Button
     let deleteBtn = document.createElement('button');
     deleteBtn.textContent = '✖';
     deleteBtn.classList.add('delete-btn');
@@ -71,7 +66,6 @@ function addTask(taskText, isCompleted) {
 }
 
 
-// Add completed task to UI
 function addCompletedTask(taskText) {
     let li = document.createElement('li');
 
@@ -93,7 +87,6 @@ function addCompletedTask(taskText) {
 }
 
 
-// Save task as string
 function saveTask(taskText, isCompleted) {
     let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
     tasks.push({ text: taskText, completed: isCompleted });
@@ -101,7 +94,6 @@ function saveTask(taskText, isCompleted) {
 }
 
 
-// Load from localStorage
 function loadTasks() {
     let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
 
@@ -114,8 +106,6 @@ function loadTasks() {
     });
 }
 
-
-// Update task text
 function updateTask(oldText, newText) {
     let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
 
@@ -127,8 +117,6 @@ function updateTask(oldText, newText) {
     }
 }
 
-
-// Delete task (from To-do list)
 function deleteTask(taskText) {
     let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
     tasks = tasks.filter(t => t.text !== taskText);
@@ -136,7 +124,6 @@ function deleteTask(taskText) {
 }
 
 
-// Delete completed task
 function deleteCompleted(taskText) {
     let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
     tasks = tasks.filter(t => t.text !== taskText);
@@ -144,7 +131,6 @@ function deleteCompleted(taskText) {
 }
 
 
-// Mark task as completed
 function markCompleted(taskText) {
     let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
 
